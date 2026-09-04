@@ -1,0 +1,69 @@
+media: media
+
+content:
+  - name: site
+    label: Configuración de la web
+    type: file
+    path: data/site.json
+    format: json
+    fields:
+      - name: title
+        label: Título
+        type: string
+      - name: description
+        label: Descripción
+        type: text
+      - name: members
+        label: Número de miembros
+        type: number
+
+  - name: members
+    label: Miembros
+    type: collection
+    path: content/members
+    fields:
+      - name: name
+        label: Nombre
+        type: string
+      - name: car
+        label: Coche
+        type: string
+      - name: description
+        label: Descripción
+        type: text
+      - name: image
+        label: Foto
+        type: image
+
+  - name: events
+    label: Eventos
+    type: collection
+    path: content/events
+    fields:
+      - name: title
+        label: Nombre del evento
+        type: string
+      - name: date
+        label: Fecha
+        type: date
+      - name: description
+        label: Descripción
+        type: text
+      - name: image
+        label: Foto
+        type: image
+
+  - name: gallery
+    label: Galería
+    type: collection
+    path: content/gallery
+    fields:
+      - name: title
+        label: Título
+        type: string
+      - name: description
+        label: Descripción
+        type: text
+      - name: image
+        label: Foto
+        type: image
